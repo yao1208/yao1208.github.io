@@ -16,15 +16,127 @@
     
 <link rel="stylesheet" href="/css/style.css">
 
-    <link rel="shortcut icon" href="https://yao1208pic.oss-cn-beijing.aliyuncs.com/logo.jpg">
+    <link rel="shortcut icon" href="https://yao1208pic.oss-cn-beijing.aliyuncs.com/avatar.png">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/css/font-awesome.min.css">
     <script id="hexo-configurations">
     let KEEP = window.KEEP || {};
     KEEP.hexo_config = {"hostname":"yao1208.github.io","root":"/","language":"zh-CN","path":"search.json"};
-    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":false,"init_open":true},"style":{"primary_color":"#0066CC","avatar":"https://yao1208pic.oss-cn-beijing.aliyuncs.com/avatar.png","favicon":"https://yao1208pic.oss-cn-beijing.aliyuncs.com/logo.jpg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":false},"first_screen":{"enable":true,"background_img":"https://yao1208pic.oss-cn-beijing.aliyuncs.com/bg.svg","description":"记录分享自己的学习过程  加油，曜！"},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":true}}},"local_search":{"enable":true,"preload":false},"code_copy":{"enable":true,"style":"default"},"pjax":{"enable":false},"lazyload":{"enable":true},"version":"3.4.2"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true},"style":{"primary_color":"#0066CC","avatar":"https://yao1208pic.oss-cn-beijing.aliyuncs.com/avatar.png","favicon":"https://yao1208pic.oss-cn-beijing.aliyuncs.com/avatar.png","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":false},"first_screen":{"enable":true,"background_img":"https://yao1208pic.oss-cn-beijing.aliyuncs.com/bg.svg","description":"记录分享自己的学习过程  加油，曜！"},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":true}}},"local_search":{"enable":true,"preload":true},"code_copy":{"enable":true,"style":"mac"},"pjax":{"enable":true},"lazyload":{"enable":true},"version":"3.4.2"};
     KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 月前","year":"%s 年前"};
   </script>
-<meta name="generator" content="Hexo 5.4.0"></head>
+<meta name="generator" content="Hexo 5.4.0"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head>
 
 
 <body>
@@ -33,6 +145,11 @@
         <span class="scroll-progress-bar"></span>
     
 
+    
+        <span class="pjax-progress-bar"></span>
+        <span class="pjax-progress-icon">
+            <i class="fas fa-circle-notch fa-spin"></i>
+        </span>
     
 </div>
 
@@ -161,8 +278,6 @@
                     <div class="author">
                         <span class="name">曜</span>
                         
-                            <span class="author-label">Lv1</span>
-                        
                     </div>
                     <div class="meta-info">
                         <div class="article-meta-info">
@@ -170,6 +285,32 @@
         <i class="fas fa-edit"></i>&nbsp;2021-05-01 21:56:47
     </span>
     
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/%E6%94%B6%E9%9B%86/">收集</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/Github/">Github</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/md%E6%A0%BC%E5%BC%8F/">md格式</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
     
 
     
@@ -188,13 +329,12 @@
         
 
         <div class="article-content markdown-body">
-            <h2 id="转载自ipandao完整md代码示例，仅用于学习记录。"><a href="#转载自ipandao完整md代码示例，仅用于学习记录。" class="headerlink" title="转载自ipandao完整md代码示例，仅用于学习记录。"></a>转载自ipandao完整md代码示例，仅用于学习记录。</h2><p>[TOC]</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># Heading 1</span><br><span class="line">## Heading 2</span><br><span class="line">### Heading 3</span><br><span class="line">#### Heading 4</span><br><span class="line">##### Heading 5</span><br><span class="line">###### Heading 6</span><br></pre></td></tr></table></figure>
+            <h2 id="转载自ipandao完整md代码示例，仅用于学习记录。"><a href="#转载自ipandao完整md代码示例，仅用于学习记录。" class="headerlink" title="转载自ipandao完整md代码示例，仅用于学习记录。"></a>转载自ipandao完整md代码示例，仅用于学习记录。</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># Heading 1</span><br><span class="line">## Heading 2</span><br><span class="line">### Heading 3</span><br><span class="line">#### Heading 4</span><br><span class="line">##### Heading 5</span><br><span class="line">###### Heading 6</span><br></pre></td></tr></table></figure>
 
 <h1 id="Heading-1"><a href="#Heading-1" class="headerlink" title="Heading 1"></a>Heading 1</h1><h2 id="Heading-2"><a href="#Heading-2" class="headerlink" title="Heading 2"></a>Heading 2</h2><h3 id="Heading-3"><a href="#Heading-3" class="headerlink" title="Heading 3"></a>Heading 3</h3><h4 id="Heading-4"><a href="#Heading-4" class="headerlink" title="Heading 4"></a>Heading 4</h4><h5 id="Heading-5"><a href="#Heading-5" class="headerlink" title="Heading 5"></a>Heading 5</h5><h6 id="Heading-6"><a href="#Heading-6" class="headerlink" title="Heading 6"></a>Heading 6</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">This is an H1</span><br><span class="line">&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</span><br><span class="line"></span><br><span class="line">This is an H2</span><br><span class="line">-------------</span><br></pre></td></tr></table></figure>
 
 <h1 id="This-is-an-H1"><a href="#This-is-an-H1" class="headerlink" title="This is an H1"></a>This is an H1</h1><h2 id="This-is-an-H2"><a href="#This-is-an-H2" class="headerlink" title="This is an H2"></a>This is an H2</h2><h2 id="字符效果和横线等"><a href="#字符效果和横线等" class="headerlink" title="字符效果和横线等"></a>字符效果和横线等</h2><hr>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">~~删除线~~ 		<span class="tag">&lt;<span class="name">s</span>&gt;</span>删除线（开启识别HTML标签时）<span class="tag">&lt;/<span class="name">s</span>&gt;</span></span><br><span class="line">*斜体字*    		_斜体字_</span><br><span class="line">**粗体** 		 	 __粗体__</span><br><span class="line">***粗斜体***		___粗斜体___</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">~~删除线~~ 		<span class="tag">&lt;<span class="name">s</span>&gt;</span>删除线（开启识别HTML标签时）<span class="tag">&lt;/<span class="name">s</span>&gt;</span></span><br><span class="line">*斜体字*    		_斜体字_</span><br><span class="line">**粗体** 		  __粗体__</span><br><span class="line">***粗斜体***		___粗斜体___</span><br></pre></td></tr></table></figure>
 
 <p><del>删除线</del>                 <s>删除线（开启识别HTML标签时）</s><br><em>斜体字</em>                  <em>斜体字</em><br><strong>粗体</strong>                      <strong>粗体</strong><br><em><strong>粗斜体</strong></em>                 <em><strong>粗斜体</strong></em></p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">上标：X<span class="tag">&lt;<span class="name">sub</span>&gt;</span>2<span class="tag">&lt;/<span class="name">sub</span>&gt;</span>，下标：O<span class="tag">&lt;<span class="name">sup</span>&gt;</span>2<span class="tag">&lt;/<span class="name">sup</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -283,9 +423,11 @@
 <ul>
 <li>列表一</li>
 <li>列表二<ul>
-<li>列表二-1</li>
+<li>列表二-1<ul>
+<li>列表二-1-1</li>
+</ul>
+</li>
 <li>列表二-2</li>
-<li>列表二-3</li>
 </ul>
 </li>
 <li>列表三<ul>
@@ -439,7 +581,7 @@
 <p>&copy; &amp;  &uml; &trade; &iexcl; &pound;<br>&amp; &lt; &gt; &yen; &euro; &reg; &plusmn; &para; &sect; &brvbar; &macr; &laquo; &middot; </p>
 <p>X&sup2; Y&sup3; &frac34; &frac14;  &times;  &divide;   &raquo;</p>
 <p>18&ordm;C  &quot;  &apos;</p>
-<h4 id="反斜杠-Escape"><a href="#反斜杠-Escape" class="headerlink" title="反斜杠 Escape"></a>反斜杠 Escape</h4><p>*literal asterisks*</p>
+<h4 id="反斜杠-Escape-去除md转意"><a href="#反斜杠-Escape-去除md转意" class="headerlink" title="反斜杠 Escape 去除md转意"></a>反斜杠 Escape 去除md转意</h4><p>*literal asterisks*</p>
 <h3 id="科学公式-TeX-KaTeX"><a href="#科学公式-TeX-KaTeX" class="headerlink" title="科学公式 TeX(KaTeX)"></a>科学公式 TeX(KaTeX)</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">行内的公式</span><br><span class="line">E&#x3D;mc^2</span><br></pre></td></tr></table></figure>
 <p>$$<br>行内的公式<br>E=mc^2<br>$$</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x &gt; y</span><br></pre></td></tr></table></figure>
@@ -466,10 +608,10 @@
                     <div class="article-next">
                         <a class="next"
                            rel="next"
-                           href="/2021/05/01/gihub%E7%9A%84%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93/"
+                           href="/2021/05/01/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E9%9D%99%E6%80%81%E7%9A%84%E4%B8%AA%E4%BA%BABLOG/"
                         >
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">gihub的常用命令总结</span>
+                                <span class="post-nav-title-item">如何搭建一个静态的个人BLOG</span>
                                 <span class="post-nav-item">下一篇</span>
                             </span>
                             <span class="right arrow-icon flex-center">
@@ -481,6 +623,85 @@
             </div>
         
 
+        
+            <div class="comment-container">
+                <div class="comments-container">
+    <div id="comment-anchor"></div>
+    <div class="comment-area-title">
+        <i class="fas fa-comments">&nbsp;评论</i>
+    </div>
+    
+
+        
+            
+    <div class="valine-container">
+        <script data-pjax
+                src="//cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js"></script>
+        <div id="vcomments"></div>
+        <script data-pjax>
+            function loadValine() {
+                new Valine({
+                    el: '#vcomments',
+                    appId: 'hRIvFCp8qkVMLcqMdnAisc4U-gzGzoHsz',
+                    appKey: '3nh0gJDtBFR69iLVeaNnLdBh',
+                    meta: ['nick', 'mail', 'link'],
+                    avatar: 'wavatar',
+                    enableQQ: true,
+                    placeholder: '欢迎回复',
+                    lang: 'zh-CN'.toLowerCase()
+                });
+
+                function getAuthor(language) {
+                    switch (language) {
+                        case 'en':
+                            return 'Author';
+                        case 'zh-CN':
+                            return '博主';
+                        default:
+                            return 'Master';
+                    }
+                }
+
+                // Add "Author" identify
+                const getValineDomTimer = setInterval(() => {
+                    const vcards = document.querySelectorAll('#vcomments .vcards .vcard');
+                    if (vcards.length > 0) {
+                        let author = '曜';
+
+                        if (author) {
+                            for (let vcard of vcards) {
+                                const vnick_dom = vcard.querySelector('.vhead .vnick');
+                                const vnick = vnick_dom.innerHTML;
+                                if (vnick === author) {
+                                    vnick_dom.innerHTML = `${vnick} <span class="author">${getAuthor(KEEP.hexo_config.language)}</span>`
+                                }
+                            }
+                        }
+                        clearInterval(getValineDomTimer);
+                    } else {
+                        clearInterval(getValineDomTimer);
+                    }
+                }, 2000);
+            }
+
+            if ('true') {
+                const loadValineTimeout = setTimeout(() => {
+                    loadValine();
+                    clearTimeout(loadValineTimeout);
+                }, 1000);
+            } else {
+                window.addEventListener('DOMContentLoaded', loadValine);
+            }
+        </script>
+    </div>
+
+
+
+        
+    
+</div>
+
+            </div>
         
     </div>
 </div>
@@ -502,7 +723,7 @@
             2021&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">曜</a>
         </div>
         
-            <script async  src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
             <div class="website-count info-item">
                 
                     <span id="busuanzi_container_site_uv">
@@ -538,6 +759,10 @@
         
 
         <!-- go comment -->
+        
+            <li class="go-comment">
+                <i class="fas fa-comment"></i>
+            </li>
         
     </ul>
 </div>
@@ -593,7 +818,7 @@
         <aside class="page-aside">
             <div class="post-toc-wrap">
     <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BD%AC%E8%BD%BD%E8%87%AAipandao%E5%AE%8C%E6%95%B4md%E4%BB%A3%E7%A0%81%E7%A4%BA%E4%BE%8B%EF%BC%8C%E4%BB%85%E7%94%A8%E4%BA%8E%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95%E3%80%82"><span class="nav-number">1.</span> <span class="nav-text">转载自ipandao完整md代码示例，仅用于学习记录。</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Heading-1"><span class="nav-number"></span> <span class="nav-text">Heading 1</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Heading-2"><span class="nav-number">1.</span> <span class="nav-text">Heading 2</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Heading-3"><span class="nav-number">1.1.</span> <span class="nav-text">Heading 3</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Heading-4"><span class="nav-number">1.1.1.</span> <span class="nav-text">Heading 4</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Heading-5"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">Heading 5</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#Heading-6"><span class="nav-number">1.1.1.1.1.</span> <span class="nav-text">Heading 6</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#This-is-an-H1"><span class="nav-number"></span> <span class="nav-text">This is an H1</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#This-is-an-H2"><span class="nav-number">1.</span> <span class="nav-text">This is an H2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E6%95%88%E6%9E%9C%E5%92%8C%E6%A8%AA%E7%BA%BF%E7%AD%89"><span class="nav-number">2.</span> <span class="nav-text">字符效果和横线等</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%95%E7%94%A8-Blockquotes"><span class="nav-number">3.</span> <span class="nav-text">引用 Blockquotes</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%94%9A%E7%82%B9%E4%B8%8E%E9%93%BE%E6%8E%A5-Links"><span class="nav-number">4.</span> <span class="nav-text">锚点与链接 Links</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%9A%E8%AF%AD%E8%A8%80%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE-Codes"><span class="nav-number">5.</span> <span class="nav-text">多语言代码高亮 Codes</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A1%8C%E5%86%85%E4%BB%A3%E7%A0%81-Inline-code"><span class="nav-number">5.0.1.</span> <span class="nav-text">行内代码 Inline code</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BC%A9%E8%BF%9B%E9%A3%8E%E6%A0%BC"><span class="nav-number">5.0.2.</span> <span class="nav-text">缩进风格</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#JS%E4%BB%A3%E7%A0%81"><span class="nav-number">5.0.3.</span> <span class="nav-text">JS代码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#HTML-%E4%BB%A3%E7%A0%81-HTML-codes"><span class="nav-number">5.0.4.</span> <span class="nav-text">HTML 代码 HTML codes</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%BE%E7%89%87-Images"><span class="nav-number">5.1.</span> <span class="nav-text">图片 Images</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%97%E8%A1%A8-Lists"><span class="nav-number">5.2.</span> <span class="nav-text">列表 Lists</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%97%A0%E5%BA%8F%E5%88%97%E8%A1%A8%EF%BC%88%E5%87%8F%E5%8F%B7%EF%BC%89Unordered-Lists"><span class="nav-number">5.2.1.</span> <span class="nav-text">无序列表（减号）Unordered Lists (-)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%97%A0%E5%BA%8F%E5%88%97%E8%A1%A8%EF%BC%88%E6%98%9F%E5%8F%B7%EF%BC%89Unordered-Lists"><span class="nav-number">5.2.2.</span> <span class="nav-text">无序列表（星号）Unordered Lists (*)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%97%A0%E5%BA%8F%E5%88%97%E8%A1%A8%EF%BC%88%E5%8A%A0%E5%8F%B7%E5%92%8C%E5%B5%8C%E5%A5%97%EF%BC%89Unordered-Lists"><span class="nav-number">5.2.3.</span> <span class="nav-text">无序列表（加号和嵌套）Unordered Lists (+)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9C%89%E5%BA%8F%E5%88%97%E8%A1%A8-Ordered-Lists"><span class="nav-number">5.2.4.</span> <span class="nav-text">有序列表 Ordered Lists (-)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#GFM-task-list"><span class="nav-number">5.2.5.</span> <span class="nav-text">GFM task list</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%98%E5%88%B6%E8%A1%A8%E6%A0%BC-Tables"><span class="nav-number">5.3.</span> <span class="nav-text">绘制表格 Tables</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7-HTML-Entities-Codes"><span class="nav-number">5.3.1.</span> <span class="nav-text">特殊符号 HTML Entities Codes</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%8D%E6%96%9C%E6%9D%A0-Escape"><span class="nav-number">5.3.2.</span> <span class="nav-text">反斜杠 Escape</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A7%91%E5%AD%A6%E5%85%AC%E5%BC%8F-TeX-KaTeX"><span class="nav-number">5.4.</span> <span class="nav-text">科学公式 TeX(KaTeX)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="nav-number">6.</span> <span class="nav-text">参考资料</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BD%AC%E8%BD%BD%E8%87%AAipandao%E5%AE%8C%E6%95%B4md%E4%BB%A3%E7%A0%81%E7%A4%BA%E4%BE%8B%EF%BC%8C%E4%BB%85%E7%94%A8%E4%BA%8E%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95%E3%80%82"><span class="nav-number">1.</span> <span class="nav-text">转载自ipandao完整md代码示例，仅用于学习记录。</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Heading-1"><span class="nav-number"></span> <span class="nav-text">Heading 1</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Heading-2"><span class="nav-number">1.</span> <span class="nav-text">Heading 2</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Heading-3"><span class="nav-number">1.1.</span> <span class="nav-text">Heading 3</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Heading-4"><span class="nav-number">1.1.1.</span> <span class="nav-text">Heading 4</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Heading-5"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">Heading 5</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#Heading-6"><span class="nav-number">1.1.1.1.1.</span> <span class="nav-text">Heading 6</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#This-is-an-H1"><span class="nav-number"></span> <span class="nav-text">This is an H1</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#This-is-an-H2"><span class="nav-number">1.</span> <span class="nav-text">This is an H2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E6%95%88%E6%9E%9C%E5%92%8C%E6%A8%AA%E7%BA%BF%E7%AD%89"><span class="nav-number">2.</span> <span class="nav-text">字符效果和横线等</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%95%E7%94%A8-Blockquotes"><span class="nav-number">3.</span> <span class="nav-text">引用 Blockquotes</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%94%9A%E7%82%B9%E4%B8%8E%E9%93%BE%E6%8E%A5-Links"><span class="nav-number">4.</span> <span class="nav-text">锚点与链接 Links</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%9A%E8%AF%AD%E8%A8%80%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE-Codes"><span class="nav-number">5.</span> <span class="nav-text">多语言代码高亮 Codes</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A1%8C%E5%86%85%E4%BB%A3%E7%A0%81-Inline-code"><span class="nav-number">5.0.1.</span> <span class="nav-text">行内代码 Inline code</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BC%A9%E8%BF%9B%E9%A3%8E%E6%A0%BC"><span class="nav-number">5.0.2.</span> <span class="nav-text">缩进风格</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#JS%E4%BB%A3%E7%A0%81"><span class="nav-number">5.0.3.</span> <span class="nav-text">JS代码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#HTML-%E4%BB%A3%E7%A0%81-HTML-codes"><span class="nav-number">5.0.4.</span> <span class="nav-text">HTML 代码 HTML codes</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%BE%E7%89%87-Images"><span class="nav-number">5.1.</span> <span class="nav-text">图片 Images</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%97%E8%A1%A8-Lists"><span class="nav-number">5.2.</span> <span class="nav-text">列表 Lists</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%97%A0%E5%BA%8F%E5%88%97%E8%A1%A8%EF%BC%88%E5%87%8F%E5%8F%B7%EF%BC%89Unordered-Lists"><span class="nav-number">5.2.1.</span> <span class="nav-text">无序列表（减号）Unordered Lists (-)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%97%A0%E5%BA%8F%E5%88%97%E8%A1%A8%EF%BC%88%E6%98%9F%E5%8F%B7%EF%BC%89Unordered-Lists"><span class="nav-number">5.2.2.</span> <span class="nav-text">无序列表（星号）Unordered Lists (*)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%97%A0%E5%BA%8F%E5%88%97%E8%A1%A8%EF%BC%88%E5%8A%A0%E5%8F%B7%E5%92%8C%E5%B5%8C%E5%A5%97%EF%BC%89Unordered-Lists"><span class="nav-number">5.2.3.</span> <span class="nav-text">无序列表（加号和嵌套）Unordered Lists (+)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9C%89%E5%BA%8F%E5%88%97%E8%A1%A8-Ordered-Lists"><span class="nav-number">5.2.4.</span> <span class="nav-text">有序列表 Ordered Lists (-)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#GFM-task-list"><span class="nav-number">5.2.5.</span> <span class="nav-text">GFM task list</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%98%E5%88%B6%E8%A1%A8%E6%A0%BC-Tables"><span class="nav-number">5.3.</span> <span class="nav-text">绘制表格 Tables</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7-HTML-Entities-Codes"><span class="nav-number">5.3.1.</span> <span class="nav-text">特殊符号 HTML Entities Codes</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%8D%E6%96%9C%E6%9D%A0-Escape-%E5%8E%BB%E9%99%A4md%E8%BD%AC%E6%84%8F"><span class="nav-number">5.3.2.</span> <span class="nav-text">反斜杠 Escape 去除md转意</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A7%91%E5%AD%A6%E5%85%AC%E5%BC%8F-TeX-KaTeX"><span class="nav-number">5.4.</span> <span class="nav-text">科学公式 TeX(KaTeX)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="nav-number">6.</span> <span class="nav-text">参考资料</span></a></li></ol>
     </div>
 </div>
         </aside>
@@ -653,11 +878,43 @@
     <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/lazyload.js"></script>
 
 
-<div class="post-scripts">
+<div class="post-scripts pjax">
     
         <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/left-side-toggle.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/libs/anime.min.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/toc.js"></script>
     
 </div>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/libs/pjax.min.js"></script>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        const pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+            // scrollTo: true,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            KEEP.utils.pjaxProgressBarStart();
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            KEEP.utils.pjaxProgressBarEnd();
+            pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+            KEEP.refresh();
+        });
+    });
+</script>
 
 
 
