@@ -289,7 +289,9 @@
 
 <p><strong>创建 SSH 密匙</strong></p>
 <p>输入 <code>ssh-keygen -t rsa -C &quot;GitHub 邮箱&quot;</code>，然后它会提示要你输入passphrase 一般情况下没有必要设置，可以直接回车，直到恢复到等待输入命令的状态。</p>
-<p>在此电脑中进入 C:\Users\用户名.ssh 目录中，用记事本打开 <strong>id_rsa.pub</strong> 文件并复制里面的内容。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">&#x27;GitHub 邮箱&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>在此电脑中进入 C:\Users\用户名\.ssh 目录中，用记事本打开 <strong>id_rsa.pub</strong> 文件并复制里面的内容。</p>
 <p>登陆 GitHub ，进入 Settings 页面，选择左边栏的 SSH and GPG keys，点击 New SSH key。</p>
 <p>Title 可以随便写，然后将 id_rsa.pub 内容粘贴到 Key 中，点击 Add SSH key 完成添加。</p>
 <p><img  
