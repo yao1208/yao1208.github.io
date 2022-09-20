@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="本博客仅用于自我学习记录，若有错误敬请谅解，如有侵权请联系删除。">
+    <meta name="author" content="曜">
+    
+    <title>
+        
+            EDA学习笔记 |
+        
+        毕竟是只万年的喵了
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="https://yao1208pic.oss-cn-beijing.aliyuncs.com/avatar.png">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/css/font-awesome.min.css">
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"yao1208.github.io","root":"/","language":"zh-CN","path":"search.json"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true},"style":{"primary_color":"#0066CC","avatar":"https://yao1208pic.oss-cn-beijing.aliyuncs.com/avatar.png","favicon":"https://yao1208pic.oss-cn-beijing.aliyuncs.com/avatar.png","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":false},"first_screen":{"enable":true,"background_img":"https://yao1208pic.oss-cn-beijing.aliyuncs.com/bg.svg","description":"记录分享自己的学习过程  加油，曜！"},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":true}}},"local_search":{"enable":true,"preload":true},"code_copy":{"enable":true,"style":"mac"},"pjax":{"enable":true},"lazyload":{"enable":true},"version":"3.4.2"};
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 月前","year":"%s 年前"};
+  </script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <span class="pjax-progress-icon">
+            <i class="fas fa-circle-notch fa-spin"></i>
+        </span>
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            <a class="logo-title" href="/">
+                毕竟是只万年的喵了
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                分类
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/links"
+                            >
+                                友链
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                关于
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">分类</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/links">友链</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">关于</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">EDA学习笔记</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="https://yao1208pic.oss-cn-beijing.aliyuncs.com/avatar.png">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">曜</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;2022-09-20 17:17:18
+    </span>
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%8CEDA%E6%8A%80%E6%9C%AF/">学习笔记，EDA技术</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <h1 id="EDA技术"><a href="#EDA技术" class="headerlink" title="EDA技术"></a>EDA技术</h1><p><code>EDA技术</code>即是电子设计自动化技术，它由<code>PLD</code>技术发展而来，可编程逻辑器件<code>PLD</code>的应用与集成规模的扩大为数字系统的设计带来了极大的方便和灵活性，变革了传统的数字系统设计理念、过程、方法。通过对<code>PLD</code>技术不断地改进提高，EDA技术应运而生。</p>
+<p><code>EDA技术</code>就是基于大规模可编程器件的，以计算机为工具，根据硬件描述语言<code>HDL</code>完成表达，实现对逻辑的编译化简、分割、布局、优化等目标的一门新技术，借助EDA技术，操作者可以通过利用软件来实现对硬件功能的一个描述，之后利用<code>FPGA/CPLD</code>才可得到最终设计结果。</p>
+<h2 id="EDA技术是一门综合性学科，它打破了软件和硬件间的壁垒，代表了电子设计技术和应用技术的发展方向。"><a href="#EDA技术是一门综合性学科，它打破了软件和硬件间的壁垒，代表了电子设计技术和应用技术的发展方向。" class="headerlink" title="EDA技术是一门综合性学科，它打破了软件和硬件间的壁垒，代表了电子设计技术和应用技术的发展方向。"></a><code>EDA技术</code>是一门综合性学科，它打破了软件和硬件间的壁垒，代表了电子设计技术和应用技术的发展方向。</h2><h2 id="缩写"><a href="#缩写" class="headerlink" title="缩写"></a>缩写</h2><p><code>EDA</code>: Electronic design automation 电子设计自动化</p>
+<p><code>FPGA</code>: Field Programmable Gate Array 可编程逻辑门阵列</p>
+<p><code>CPLD</code>: Complex Programmable logic device 复杂可编程逻辑器件</p>
+<p><code>VHDL</code>: VHSIC(Very-High-Speed Integrated Circuit) Hardware Description Languag 超高速集成电路硬件描述语言</p>
+<p><code>RTL</code>: Register Transfer Level 暂存器转移层次</p>
+<p><code>SOC</code>: System on Chip 系统级芯片</p>
+<p><code>IP core</code>: Intellectual Property core 知识产权核</p>
+<p><code>ASIC</code>: Application Specific Integrated Circuit 特殊应用集成电路</p>
+<p><code>VHSIC</code>: Very-High-Speed Integrated Circuit 超高速集成电路</p>
+<p><code>STA</code>: Static Timing Analysis 静态时序分析</p>
+<p><code>DSP</code>: Digital Signal Process 数字信号处理</p>
+<h1 id="基础语法"><a href="#基础语法" class="headerlink" title="基础语法"></a>基础语法</h1><h2 id="Verilog基本概念"><a href="#Verilog基本概念" class="headerlink" title="Verilog基本概念"></a><code>Verilog</code>基本概念</h2><h3 id="模块语句及其表达式"><a href="#模块语句及其表达式" class="headerlink" title="模块语句及其表达式"></a>模块语句及其表达式</h3><p><code>Verilog</code>的基本设计单元是“模块”(block) 。一个模块是由两部分组成的，一部分描述<strong>接口</strong>，另一部分描述<strong>逻辑功能</strong>，即定义输入是如何影响输出的。</p>
+<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">module</span> 模块名(模块端口名表);</span><br><span class="line">    	模块端口和模块功能描述</span><br><span class="line"><span class="keyword">endmodule</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="模块名（标识符）的命名规则："><a href="#模块名（标识符）的命名规则：" class="headerlink" title="模块名（标识符）的命名规则："></a>模块名（标识符）的命名规则：</h4><ul>
+<li><p>标识符是用户在描述时给 标识符是用户在描述时给<code>Verilog</code>对象起的名字；</p>
+</li>
+<li><p>标识符必须以字母 标识符必须以字母(a-z, A-Z) 或( _ ) 开头，后面可以是字母、数字、或( $ _ )。</p>
+</li>
+<li><p> 最长可以是1023个字符个字符。</p>
+</li>
+<li><p>标识符区分大小写，标识符区分大小写，<code>sel</code> 和<code>SEL</code>是不同的标识符。</p>
+</li>
+<li><p> 模块、端口和实例的名字都是标识符。</p>
+</li>
+<li><p>标识符要区别与关键字，这个命名规则和C语言大同小异。</p>
+</li>
+</ul>
+<h3 id="模块端口描述语句"><a href="#模块端口描述语句" class="headerlink" title="模块端口描述语句"></a>模块端口描述语句</h3><h4 id="端口语句、端口信号名、端口模式："><a href="#端口语句、端口信号名、端口模式：" class="headerlink" title="端口语句、端口信号名、端口模式："></a>端口语句、端口信号名、端口模式：</h4><p>端口定义关键词一般有三种：<code>input</code>、<code>output</code>、<code>inout</code>，定义端口语句一般格式如下：</p>
+<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">input</span> 端口名<span class="number">1</span>，端口名<span class="number">2</span>，...;</span><br><span class="line"><span class="keyword">output</span> 端口名<span class="number">1</span>，端口名<span class="number">2</span>，...;</span><br><span class="line"><span class="keyword">inout</span> 端口名<span class="number">1</span>，端口名<span class="number">2</span>，...;</span><br><span class="line"><span class="keyword">input</span> [msb:lsb]端口名<span class="number">1</span>，端口名<span class="number">2</span>，...;</span><br></pre></td></tr></table></figure>
+
+<p>注：I/O说明也可以写在端口声明语句里。其格式如下：</p>
+<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">module</span> 模块名(<span class="keyword">input</span> 端口名<span class="number">1</span>,<span class="keyword">input</span> 端口名<span class="number">2</span>,<span class="keyword">output</span> 端口名<span class="number">3</span>,<span class="keyword">output</span> 端口名<span class="number">4</span>… ); </span><br></pre></td></tr></table></figure>
+
+<h3 id="描述模块的逻辑功能和电路结构"><a href="#描述模块的逻辑功能和电路结构" class="headerlink" title="描述模块的逻辑功能和电路结构"></a>描述模块的逻辑功能和电路结构</h3><h4 id="内部信号说明"><a href="#内部信号说明" class="headerlink" title="内部信号说明"></a>内部信号说明</h4><p>在模块内用到的和与端口有关的<code>wire</code> 和 <code>reg</code> 变量的声明。</p>
+<p>输入输出信号缺省时默认是<code>wire</code>。在always块里的指定信号，常代表触发器寄存器，如果需要中间赋值或运算，需声明成<code>reg</code>类型。</p>
+<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">reg</span> [width-<span class="number">1</span> :<span class="number">0</span>] 变量<span class="number">1</span>，变量<span class="number">2</span> …；</span><br><span class="line"><span class="keyword">wire</span> [width-<span class="number">1</span> : <span class="number">0</span>] 变量<span class="number">1</span>，变量<span class="number">2</span> …；</span><br></pre></td></tr></table></figure>
+
+<h4 id="verilog数据常量定义："><a href="#verilog数据常量定义：" class="headerlink" title="verilog数据常量定义："></a><code>verilog</code>数据常量定义：</h4><p>数字表达式：**<code>&lt;位宽&gt;&lt;进制&gt;&lt;数字&gt;</code>**<br>‘b:二进制 <code>4&#39;b1110</code> 表示4位二进制数1110<br>‘h:十六进制 <code>8&#39;hef</code> <code>4&#39;ha</code><br>‘d:十进制  <code>2&#39;d3</code>、<code>4&#39;d15</code>(不能写16，4位宽最大15)等</p>
+<h3 id="顶层程序调用底层module"><a href="#顶层程序调用底层module" class="headerlink" title="顶层程序调用底层module"></a>顶层程序调用底层module</h3><p>和c语言函数格式类似，通过module定义的端口传递参数，但是使用思想不同。</p>
+<p><code>模组类名 实例名（端口变量）</code></p>
+<p>端口变量尽量书写规范</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.a(A)  #.模组定义端口变量（实际变量）</span><br></pre></td></tr></table></figure>
+
+<h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3><h4 id="reg"><a href="#reg" class="headerlink" title="reg"></a><code>reg</code></h4><p>关键词<code>reg</code>主要用于定义特定类型的变量，即寄存器变量或称寄存器数据类型的变量。</p>
+<ul>
+<li><p>在物理结构上相对比较麻烦，左端有一个输入端口 <code>D</code>，右端有一个输出端口 <code>Q</code>， 并且 <code>reg</code> 型存储数据需要在<code>CLK</code>（时钟）沿的控制下完成，在 <code>Verilog HDL</code> 描述时也相对麻烦。</p>
+</li>
+<li><p><strong>在对<code>reg</code> 型变量进行赋值时，必须在 <code>always</code> 块内完成。</strong></p>
+<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">reg</span> a,b;    <span class="comment">//声明2个reg型变量a和b(一位)</span></span><br><span class="line"><span class="keyword">reg</span>[<span class="number">7</span>:<span class="number">0</span>]  out;  <span class="comment">//out的宽度是8位</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="wire"><a href="#wire" class="headerlink" title="wire"></a><code>wire</code></h4><ul>
+<li><p>在物理结构上只是一根线，在<code>Verilog HDL</code>描述时，对线型变量赋值用<code>assign</code>即可，相对比较简单。</p>
+</li>
+<li><p><code>wire</code>是最常用的<code>net</code>型数据变量，net型数据相当于硬件电路中的各种物理连接，其特点是输出的值随输入值的变化而变化。</p>
+</li>
+<li><p><strong><code>Verilog</code> 模块中的输入/输出信号在没有明确指定数据类型时都被默认为wire型。</strong></p>
+<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">wire</span> a,b;<span class="comment">//声明2个wire型变量a和b(一位)</span></span><br><span class="line"><span class="keyword">wire</span>[<span class="number">7</span>:<span class="number">0</span>]  databus; <span class="comment">//databus（数据总线）的宽度是8位</span></span><br><span class="line"><span class="keyword">wire</span>[<span class="number">19</span>:<span class="number">0</span>] addrbus;<span class="comment">//addrbus（地址总线）的宽度是20位</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="Verilog-基本语法"><a href="#Verilog-基本语法" class="headerlink" title="Verilog 基本语法"></a><code>Verilog</code> 基本语法</h2><h3 id="各种运算符"><a href="#各种运算符" class="headerlink" title="各种运算符"></a>各种运算符</h3><h4 id="算数运算符"><a href="#算数运算符" class="headerlink" title="算数运算符"></a>算数运算符</h4><p>算术运算符，简单来说，就是数学运算里面的加减乘除，数字逻辑处理有时候也需要进行数字运算，所以需要算术运算符。</p>
+<table>
+<thead>
+<tr>
+<th align="center">符号</th>
+<th align="center">使用方法</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">+</td>
+<td align="center">a + b</td>
+<td align="center">a加上b</td>
+</tr>
+<tr>
+<td align="center">-</td>
+<td align="center">a - b</td>
+<td align="center">a减去b</td>
+</tr>
+<tr>
+<td align="center">*</td>
+<td align="center">a * b</td>
+<td align="center">a乘以b</td>
+</tr>
+<tr>
+<td align="center">/</td>
+<td align="center">a / b</td>
+<td align="center">a除以b</td>
+</tr>
+<tr>
+<td align="center">%</td>
+<td align="center">a % b</td>
+<td align="center">a模除b</td>
+</tr>
+</tbody></table>
+<h4 id="关系运算符"><a href="#关系运算符" class="headerlink" title="关系运算符"></a>关系运算符</h4><p>关系运算符主要是用来做一些条件判断用的，在进行关系运算符时，如果声明的关系是假的，则返回值是0，如果声明的关系是真的，则返回值是1；所有的关系运算符有着相同的优先级别，关系运算符的优先级别低于算术运算符的优先级别</p>
+<table>
+<thead>
+<tr>
+<th align="center">符号</th>
+<th align="center">使用方法</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">&gt;</td>
+<td align="center">a &gt; b</td>
+<td align="center">a大于b</td>
+</tr>
+<tr>
+<td align="center">&lt;</td>
+<td align="center">a &lt; b</td>
+<td align="center">a小于b</td>
+</tr>
+<tr>
+<td align="center">&gt;=</td>
+<td align="center">a &gt;= b</td>
+<td align="center">a大于等于b</td>
+</tr>
+<tr>
+<td align="center">&lt;=</td>
+<td align="center">a &lt;= b</td>
+<td align="center">a小于等于b</td>
+</tr>
+<tr>
+<td align="center">==</td>
+<td align="center">a == b</td>
+<td align="center">a等于b</td>
+</tr>
+<tr>
+<td align="center">!=</td>
+<td align="center">a != b</td>
+<td align="center">a不等于b</td>
+</tr>
+</tbody></table>
+<h4 id="赋值运算符"><a href="#赋值运算符" class="headerlink" title="赋值运算符"></a>赋值运算符</h4><table>
+<thead>
+<tr>
+<th align="center">符号</th>
+<th align="center">使用方法</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">=</td>
+<td align="center"><code>a = b</code></td>
+<td align="center">阻塞赋值，阻塞赋值是上一条语句已经执行赋值操作后才开始下一条语句的执行</td>
+</tr>
+<tr>
+<td align="center">&lt;=</td>
+<td align="center"><code>a &lt;= b</code></td>
+<td align="center">非阻塞赋值，非阻塞赋值是可以在上一条语句赋值操作还没有完成前就开始下一条语句的执行</td>
+</tr>
+<tr>
+<td align="center">assign</td>
+<td align="center">assign a = b</td>
+<td align="center">连续赋值，</td>
+</tr>
+<tr>
+<td align="center">.</td>
+<td align="center"><code>cellAnd m0( .a(line0), .b(line1), .c(result) );</code></td>
+<td align="center">“.”来映射赋值，编译器会根据上下文自己推断</td>
+</tr>
+</tbody></table>
+<h4 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h4><p>逻辑运算符是连接多个关系表达式用的，可实现更加复杂的判断，一般不单独使用，都需要配合具体语句来实现完整的意思</p>
+<table>
+<thead>
+<tr>
+<th align="center">符号</th>
+<th align="center">使用方法</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">!</td>
+<td align="center">!a</td>
+<td align="center">a的非，如果a为0，那么a的非是1。</td>
+</tr>
+<tr>
+<td align="center">&amp;&amp;</td>
+<td align="center">a &amp;&amp; b</td>
+<td align="center">a 与上 b，如果a和b都为1，a&amp;&amp;b结果才为1，表示真</td>
+</tr>
+<tr>
+<td align="center">||</td>
+<td align="center">a || b</td>
+<td align="center">a 或上 b，如果a或者b有一个为1，a||b结果为1，表示真。</td>
+</tr>
+</tbody></table>
+<h4 id="条件运算符"><a href="#条件运算符" class="headerlink" title="条件运算符"></a>条件运算符</h4><p>条件操作符一般来构建从两个输入中选择一个作为输出的条件选择结构，功能等同于<code>always</code>中的<code>if-else</code>语句。</p>
+<table>
+<thead>
+<tr>
+<th align="center">符号</th>
+<th align="center">使用方法</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">? :</td>
+<td align="center">a ? b : c</td>
+<td align="center">如果 a 为真，就选择 b，否则选择 c</td>
+</tr>
+</tbody></table>
+<h4 id="位运算符"><a href="#位运算符" class="headerlink" title="位运算符"></a>位运算符</h4><p>位运算符是一类最基本的运算符，可以认为它们直接对应数字逻辑中的与、或、非门等逻辑门。</p>
+<p><strong>位运算符的与、或、非与逻辑运算符逻辑与、逻辑或、逻辑非使用时候容易混淆，逻辑运算符一般用在条件判断上，位运算符一般用在信号赋值上。</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">符号</th>
+<th align="center">使用方法</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">~</td>
+<td align="center">~a</td>
+<td align="center">将 a 的每个位进行取反</td>
+</tr>
+<tr>
+<td align="center">&amp;</td>
+<td align="center">a &amp; b</td>
+<td align="center">将 a 的每个位与 b 相同的位进行相与</td>
+</tr>
+<tr>
+<td align="center">|</td>
+<td align="center">a | b</td>
+<td align="center">将 a 的每个位与 b 相同的位进行相或</td>
+</tr>
+<tr>
+<td align="center">^</td>
+<td align="center">a ^ b</td>
+<td align="center">将 a 的每个位与 b 相同的位进行异或</td>
+</tr>
+</tbody></table>
+<h4 id="移位运算符"><a href="#移位运算符" class="headerlink" title="移位运算符"></a>移位运算符</h4><p>移位运算符包括左移位运算符和右移位运算符，这两种移位运算符都用0来填补移出的空位。</p>
+<table>
+<thead>
+<tr>
+<th align="left">符号</th>
+<th align="left">使用方法</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">&lt;&lt;</td>
+<td align="left">a &lt;&lt; b</td>
+<td align="left">将 a 左移 b 位</td>
+</tr>
+<tr>
+<td align="left">&gt;&gt;</td>
+<td align="left">a &gt;&gt; b</td>
+<td align="left">将 a 右移 b 位</td>
+</tr>
+</tbody></table>
+<h4 id="拼接运算符"><a href="#拼接运算符" class="headerlink" title="拼接运算符"></a>拼接运算符</h4><p><code>Verilog</code>中有一个特殊的运算符是C语言中没有的，就是位拼接运算符。用这个运算符可以把两个或多个信号的某些位拼接起来进行运算操作。</p>
+<table>
+<thead>
+<tr>
+<th align="center">符号</th>
+<th align="center">使用方法</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">{}</td>
+<td align="center">{a, b}</td>
+<td align="center">将 a 和 b 拼接起来，作为一个新信号</td>
+</tr>
+</tbody></table>
+<h2 id="Verilog语句"><a href="#Verilog语句" class="headerlink" title="Verilog语句"></a><code>Verilog</code>语句</h2><h4 id="assign语句"><a href="#assign语句" class="headerlink" title="assign语句"></a><code>assign</code>语句</h4><p><code>assign</code>是连续赋值命名的关键词，当等号右侧的驱动表达式中的任一信号变量发生变化时，此表达式被重新计算一遍，并将获得的数据立即赋值给左侧的目标变量。</p>
+<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">assign</span> [延时] 目标变量名 = 驱动表达式;</span><br><span class="line"></span><br><span class="line">&#x27;timescale <span class="number">10</span>ns/<span class="number">100</span>ps<span class="comment">//仿真的基本时间单元是10ns，仿真时间精度是100ps</span></span><br><span class="line"><span class="keyword">assign</span> #<span class="number">6</span> R1 = A &amp; B;<span class="comment">//延时6个时间单元（60ns）后再赋值</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="parameter语句"><a href="#parameter语句" class="headerlink" title="parameter语句"></a><code>parameter</code>语句</h4><p>参数是一个特殊常量，<code>parameter</code>就是用来定义参数的关键字。</p>
+<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">parameter</span> 标识符<span class="number">1</span> = 表达式或数值<span class="number">1</span>, 标识符<span class="number">2</span> = 表达式或数值<span class="number">2</span>, ... ;</span><br><span class="line"><span class="keyword">parameter</span> A = <span class="number">15</span>, B = <span class="number">4&#x27;b1011</span>, C = <span class="number">8&#x27;hAC</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//parameter的参数传递功能</span></span><br><span class="line"><span class="keyword">module</span> MULT4B #(<span class="keyword">parameter</span> S = <span class="number">4</span>)(R, A, B);</span><br></pre></td></tr></table></figure>
+
+<h4 id="begin-end语句"><a href="#begin-end语句" class="headerlink" title="begin-end语句"></a><code>begin-end</code>语句</h4><p>引导顺序块语句</p>
+<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">begin</span> [:块名]</span><br><span class="line">	语句<span class="number">1</span>;</span><br><span class="line">	语句<span class="number">2</span>;</span><br><span class="line">	...</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="if语句"><a href="#if语句" class="headerlink" title="if语句"></a><code>if</code>语句</h4><p>条件（if）语句用于控制执行语句要根据条件判断来确定是否执行。</p>
+<p>条件语句用关键字 if 和 else 来声明，条件表达式必须在圆括号中。</p>
+<p>条件语句使用结构说明如下：</p>
+<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (表达式<span class="number">1</span>) 语句<span class="number">1</span>;</span><br><span class="line"><span class="keyword">else</span> <span class="keyword">if</span> (表达式<span class="number">2</span>) 语句<span class="number">2</span>;</span><br><span class="line"><span class="keyword">else</span> <span class="keyword">if</span> (表达式<span class="number">2</span>) 语句<span class="number">3</span>;</span><br><span class="line"><span class="keyword">else</span> 语句<span class="number">4</span>;</span><br></pre></td></tr></table></figure>
+
+<h4 id="case语句"><a href="#case语句" class="headerlink" title="case语句"></a><code>case</code>语句</h4><p>自上而下，按照顺序逐个对分支表达式进行判断，如果这一分支表达式等于控制表达式的值，就执行其对应操作；均不相等时，执行<code>default</code>操作；</p>
+<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">case</span>(表达式)</span><br><span class="line">	取值<span class="number">1</span> : <span class="keyword">begin</span> 语句<span class="number">1</span>;语句<span class="number">2</span>; <span class="keyword">end</span></span><br><span class="line">    取值<span class="number">2</span> : <span class="keyword">begin</span> 语句<span class="number">3</span>;语句<span class="number">4</span>; <span class="keyword">end</span></span><br><span class="line">    <span class="keyword">default</span> : <span class="keyword">begin</span> 语句<span class="number">5</span>; <span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>分支表达式不能重复，否则会出现冲突；</p>
+</li>
+<li><p>执行完某一操作后，跳出<code>case</code>语句；</p>
+</li>
+<li><p>控制表达式与多个分支表达式匹配，只执行从上至下首个匹配项（判断顺序进行，执行一次后就跳出<code>case</code>语句了）；</p>
+<p><code>casez</code>进行控制表达式与分支表达式的比较时，不关注高阻态位（不管是控制表达式还是条件表达式，高阻态的位均默认为匹配）；<br><code>casex</code>进行控制表达式与分支表达式的比较时，不关注高阻态，以及不确定（不管是控制表达式还是条件表达式，高组态和不确定位均默认为匹配）；</p>
+</li>
+</ul>
+<h3 id="initial语句"><a href="#initial语句" class="headerlink" title="initial语句"></a><code>initial</code>语句</h3><p>initial 语句从 0 时刻开始执行，只执行一次。</p>
+<h4 id="always语句"><a href="#always语句" class="headerlink" title="always语句"></a><code>always</code>语句</h4><p>引导对模块逻辑功能描述的顺序语句，<code>always</code>语句块从仿真0时刻开始执行其中的行为语句；最后一条执行完成后，再开始执行其中的第一条语句，如此往复循环，直到整个仿真结束。</p>
+<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">always</span> @(<span class="keyword">posedge</span> clock)</span><br><span class="line"><span class="keyword">begin</span></span><br><span class="line">  ......</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="循环语句"><a href="#循环语句" class="headerlink" title="循环语句"></a>循环语句</h4><p><strong><code>while</code>语句</strong>与C语言语法基本一致。</p>
+<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> (表达式) <span class="keyword">begin</span></span><br><span class="line">    ...</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+
+<p><strong><code>for</code>语句</strong>与C语言语法基本一致。但需要注意变量的类型应该为<code>interger</code>，为int的全称。</p>
+<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">integer</span> i ;</span><br><span class="line"><span class="keyword">for</span>(表达式<span class="number">1</span>; 表达式<span class="number">2</span> ; 表达式<span class="number">3</span>)  <span class="keyword">begin</span></span><br><span class="line">    ...</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+
+<p><strong><code>repeat</code> 循环</strong>，为<code>verilog</code>特有的。 <code>repeat</code> 循环语法格式如下：</p>
+<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">repeat</span> (循环次数) <span class="keyword">begin</span></span><br><span class="line">    ...</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+
+<p><code>repeat</code> 的功能是执行固定次数的循环，它不能像 <code>while</code> 循环那样用一个逻辑表达式来确定循环是否继续执行。</p>
+<p><code>repeat</code> 循环的次数必须是一个常量、变量或信号。如果循环次数是变量信号，则循环次数是开始执行 <code>repeat</code> 循环时变量信号的值。即便执行期间，循环次数代表的变量信号值发生了变化，<code>repeat</code> 执行次数也不会改变。</p>
+<p><strong><code>forever</code> 循环</strong><code>forever</code> 循环语法格式如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">forever begin</span><br><span class="line">    …</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+
+<p><code>forever</code> 语句表示永久循环，不包含任何条件表达式，一旦执行便无限的执行下去，系统函数 <code>$finish</code> 可退出 <code>forever</code>。<code>forever</code> 相当于 <code>while(1)</code> 。</p>
+<h2 id="状态机"><a href="#状态机" class="headerlink" title="状态机"></a>状态机</h2><p><code>Verilog</code> 中状态机主要用于同步时序逻辑的设计，能够在有限个状态之间按一定要求和规律切换时序电路的状态。状态的切换方向不但取决于各个输入值，还取决于当前所在状态。 状态机可分为 2 类：<code>Moore</code> 状态机和 <code>Mealy</code> 状态机。</p>
+<h3 id="Moore-型状态机"><a href="#Moore-型状态机" class="headerlink" title="Moore 型状态机"></a>Moore 型状态机</h3><p>Moore 型状态机的输出只与当前状态有关，与当前输入无关。</p>
+<p>输出会在一个完整的时钟周期内保持稳定，即使此时输入信号有变化，输出也不会变化。输入对输出的影响要到下一个时钟周期才能反映出来。这也是 Moore 型状态机的一个重要特点：输入与输出是隔离开来的。</p>
+<h3 id="Mealy-型状态机"><a href="#Mealy-型状态机" class="headerlink" title="Mealy 型状态机"></a>Mealy 型状态机</h3><p>Mealy 型状态机的输出，不仅与当前状态有关，还取决于当前的输入信号。</p>
+<p>Mealy 型状态机的输出是在输入信号变化以后立刻发生变化，且输入变化可能出现在任何状态的时钟周期内。因此，同种逻辑下，Mealy 型状态机输出对输入的响应会比 Moore 型状态机早一个时钟周期。</p>
+<h3 id="状态机的一般结构"><a href="#状态机的一般结构" class="headerlink" title="状态机的一般结构"></a>状态机的一般结构</h3><ol>
+<li>状态机说明部分</li>
+<li>主控时序过程</li>
+<li>主控组合过程</li>
+<li>辅助过程</li>
+</ol>
+<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//序列检查状态机</span></span><br><span class="line"><span class="keyword">module</span> SCHK(<span class="keyword">input</span> CLK, DIN ,RST,<span class="keyword">output</span> SOUT);</span><br><span class="line">    <span class="keyword">parameter</span> s0=<span class="number">41</span>, s1=<span class="number">41</span>, s2=<span class="number">42</span>, s3=<span class="number">43</span>, s4=<span class="number">44</span>,</span><br><span class="line">    			s5=<span class="number">45</span>, s6=<span class="number">46</span>, s7=<span class="number">47</span> ,s8=<span class="number">48</span>;<span class="comment">//状态机说明部分</span></span><br><span class="line">    <span class="keyword">reg</span> [<span class="number">8</span>:<span class="number">0</span>] ST, NST;</span><br><span class="line">    <span class="keyword">always</span>@(<span class="keyword">posedge</span> CLK <span class="keyword">or</span> <span class="keyword">posedge</span> RST)<span class="comment">//主控时序过程</span></span><br><span class="line">        <span class="keyword">if</span>(RST)</span><br><span class="line">            ST &lt;= s0;</span><br><span class="line">    	<span class="keyword">else</span></span><br><span class="line">            ST &lt;= NST;</span><br><span class="line">    <span class="keyword">always</span>@(ST <span class="keyword">or</span> DIN) <span class="keyword">begin</span><span class="comment">//主控组合过程</span></span><br><span class="line">        <span class="keyword">case</span>(ST)</span><br><span class="line">            s0 : <span class="keyword">if</span>(DIN == <span class="number">1&#x27;b1</span>) NST &lt;= S1; <span class="keyword">else</span> NST &lt;= s0;</span><br><span class="line">            s1 : <span class="keyword">if</span>(DIN == <span class="number">1&#x27;b1</span>) NST &lt;= S2; <span class="keyword">else</span> NST &lt;= s0;</span><br><span class="line">            s2 : <span class="keyword">if</span>(DIN == <span class="number">1&#x27;b0</span>) NST &lt;= S3; <span class="keyword">else</span> NST &lt;= s2;</span><br><span class="line">            s3 : <span class="keyword">if</span>(DIN == <span class="number">1&#x27;b1</span>) NST &lt;= S4; <span class="keyword">else</span> NST &lt;= s0;</span><br><span class="line">            s4 : <span class="keyword">if</span>(DIN == <span class="number">1&#x27;b0</span>) NST &lt;= S5; <span class="keyword">else</span> NST &lt;= s2;</span><br><span class="line">            s5 : <span class="keyword">if</span>(DIN == <span class="number">1&#x27;b0</span>) NST &lt;= S6; <span class="keyword">else</span> NST &lt;= s1;</span><br><span class="line">            s6 : <span class="keyword">if</span>(DIN == <span class="number">1&#x27;b1</span>) NST &lt;= S7; <span class="keyword">else</span> NST &lt;= s0;</span><br><span class="line">            s7 : <span class="keyword">if</span>(DIN == <span class="number">1&#x27;b1</span>) NST &lt;= S8; <span class="keyword">else</span> NST &lt;= s0;</span><br><span class="line">            s8 : <span class="keyword">if</span>(DIN == <span class="number">1&#x27;b0</span>) NST &lt;= S3; <span class="keyword">else</span> NST &lt;= s2;</span><br><span class="line">            <span class="keyword">default</span> : NST &lt;= s0;</span><br><span class="line">        <span class="keyword">endcase</span></span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line">    <span class="keyword">assign</span> SOUT = (ST == s8);<span class="comment">//辅助部分</span></span><br><span class="line"><span class="keyword">endmodule</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="其他说明"><a href="#其他说明" class="headerlink" title="其他说明"></a>其他说明</h2><h3 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h3><p><code>Verilog</code>代码中的注释和c++语言相同，分为短注释(//)和长注释(/* … */)。短注释通常放在每行代码的后面或上面，用来注释这行代码的功能。</p>
+<h3 id="四种逻辑状态"><a href="#四种逻辑状态" class="headerlink" title="四种逻辑状态"></a>四种逻辑状态</h3><p><code>verilog</code>有4种逻辑状态0、1、z、x对应低、高电平、高阻态、不确定状态；出现x状态一般在<code>simulation</code>的时候。</p>
+<ul>
+<li>x是不定，就是不确定。一般在仿真的时候出现了，实际电路里是没有x的。</li>
+</ul>
+<h3 id="Verilog的延迟："><a href="#Verilog的延迟：" class="headerlink" title="Verilog的延迟："></a><code>Verilog</code>的延迟：</h3><ol>
+<li>上升延迟：在门的输入发生变化的情况下，门的输出从0，x，z变化到1所需的时间成为上升延迟；</li>
+<li>下降延迟：下降延迟是指门的输出从1，x，z变化到0所需的时间；</li>
+<li>关断延迟：门的输出从0，1，x变化为高阻Z所需的时间。</li>
+</ol>
+<h1 id="概念辨析"><a href="#概念辨析" class="headerlink" title="概念辨析"></a>概念辨析</h1><h3 id="组合逻辑与时序逻辑"><a href="#组合逻辑与时序逻辑" class="headerlink" title="组合逻辑与时序逻辑"></a>组合逻辑与时序逻辑</h3><p>（1）组合逻辑：输出只是当前输入逻辑电平的函效（有延时），与电路的原始状念无关的逻辑电路。也就是说，当输入信号中的任何一个发生变化时，输出都有可能会根据其变化而变化，但与电路目前所处的状态没有任何关系（即逻辑电路没有记忆部件）。<br>（2）时序逻辑：输出不只是当前输入的逻辑电平的函数，还与电路目前所处的状态有关的逻辑电路（即逻辑电路有记忆部件）。<br>（1）组合逻辑：组合逻辑是由与、或、非门组成的网络。常用的组合电路有多路器、数据通路开关、加法器、乘法器等。<br>（2）时序逻辑：时序逻辑是由多个触发器和多个组合逻辑块组成的网络。常用的有计数器、复杂的数据流动控制逻辑、运算控制逻辑、指令分析和操作控制逻辑。同步时序逻辑是设计复杂的数字逻辑系统的核心。时序逻辑借助于状态寄存器记住它目前所处的状态。在不同的状态下，即使所有的输入都相同，其输出也不一定相同。</p>
+<h3 id="同步、异步"><a href="#同步、异步" class="headerlink" title="同步、异步"></a>同步、异步</h3><p>异步指输入信号和时钟无关；同步指输入信号和时钟信号有关，实际上就是输入信号和时钟信号进行了与运算或者与非运算。实际开发中，经常有同步清零、异步清零、同步复位、异步复位等概念，下面就给与相关代码演示。</p>
+<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//同步清零：</span></span><br><span class="line"><span class="keyword">module</span> dff(d,clk,clr,q);</span><br><span class="line"><span class="keyword">input</span> d,clk,clr;</span><br><span class="line"><span class="keyword">output</span> q;</span><br><span class="line"><span class="keyword">reg</span> q;</span><br><span class="line"><span class="keyword">always</span>@(<span class="keyword">posedge</span> clk)</span><br><span class="line">	<span class="keyword">if</span>(!clr) q&lt;=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">else</span> q&lt;=d;</span><br><span class="line"><span class="keyword">endmodule</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//异步清零：</span></span><br><span class="line"><span class="keyword">module</span> dff(d,clk,clr,q);</span><br><span class="line"><span class="keyword">input</span> d,clk,clr;</span><br><span class="line"><span class="keyword">output</span> q;</span><br><span class="line"><span class="keyword">reg</span> q;</span><br><span class="line"><span class="keyword">always</span>@(<span class="keyword">posedge</span> clk <span class="keyword">or</span> <span class="keyword">negedge</span> clr)</span><br><span class="line">	<span class="keyword">if</span>(!clr) q&lt;=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">else</span> q&lt;=d;</span><br><span class="line"><span class="keyword">endmodule</span></span><br></pre></td></tr></table></figure>
+
+<p>事实上，清零(复位)、置数、使能三个信号可以任意选取同步、异步两种方式之一，所以这三个信号可以任意组成八种不同功能的电路，像异步复位、同步置数、异步使能等</p>
+<p>同步复位和异步复位的区别就在于 前者的复何信号不能出现在always语句的敏感信号表中，无论是同步复位还是异步复位，always语句的结构都是if(Reset)…else… ，否则，综合工具将不能正确的综合</p>
+<p>所有always语句中的赋值最好采用非阻塞赋值语 ，否则，可能会导致仿真与综合的不一致</p>
+<h3 id="阻塞赋值与非阻塞赋值"><a href="#阻塞赋值与非阻塞赋值" class="headerlink" title="阻塞赋值与非阻塞赋值"></a>阻塞赋值与非阻塞赋值</h3><p><strong>(1).非阻塞(Non_Blocking)赋值方式( 如 b &lt;= a; )</strong></p>
+<ul>
+<li>块结束后才完成赋值操作。</li>
+<li>b的值并不是立刻就改变的。</li>
+<li>常用于编写综合模块。</li>
+</ul>
+<p><strong>(2).阻塞(Blocking)赋值方式( 如 b = a; )</strong></p>
+<ul>
+<li>赋值语句执行完后块才结束。</li>
+<li>b的值在赋值语句执行完后立刻就改变的。</li>
+<li>可能会产生意想不到的结果。</li>
+</ul>
+<h1 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h1><h2 id="加法器"><a href="#加法器" class="headerlink" title="加法器"></a>加法器</h2><h4 id="半加器"><a href="#半加器" class="headerlink" title="半加器"></a>半加器</h4><figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">module</span> h_adder ( A, B, SO, CO) ;</span><br><span class="line">    <span class="keyword">input</span> A,B;</span><br><span class="line">    <span class="keyword">output</span> SO,CO;</span><br><span class="line">    <span class="keyword">assign</span> SO = A ^ B; </span><br><span class="line">    <span class="keyword">assign</span> CO = A &amp; B; </span><br><span class="line"><span class="keyword">endmodule</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="全加器"><a href="#全加器" class="headerlink" title="全加器"></a>全加器</h4><figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">module</span> f_adder(ain, bin, cin, cout, sum); </span><br><span class="line">	<span class="keyword">output</span> cout, sum;</span><br><span class="line">    <span class="keyword">input</span> ain, bin, cin;</span><br><span class="line">    <span class="keyword">wire</span> net1, net2, net3; </span><br><span class="line">    h_adder Ul(ain, bin, net1, net2); </span><br><span class="line">    h_adder U2(<span class="variable">.A</span>(net1), <span class="variable">.so</span>(sum), <span class="variable">.B</span>(cin), <span class="variable">.Co</span>(net3)); </span><br><span class="line">    <span class="keyword">or</span> U3(cout, net2, net3); </span><br><span class="line"><span class="keyword">endmodule</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="译码器"><a href="#译码器" class="headerlink" title="译码器"></a>译码器</h2><figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">module</span> decoder(a,Q);</span><br><span class="line">	<span class="keyword">input</span> [<span class="number">3</span>:<span class="number">0</span>]a;</span><br><span class="line">	<span class="keyword">output</span> <span class="keyword">reg</span> [<span class="number">7</span>:<span class="number">0</span>]Q;</span><br><span class="line">	<span class="keyword">always</span>@(a) <span class="keyword">begin</span></span><br><span class="line">		<span class="keyword">case</span>(a)</span><br><span class="line">        <span class="number">4&#x27;h0</span>: Q &lt;= <span class="number">8&#x27;h3F</span>;<span class="number">4&#x27;h1</span>: Q &lt;= <span class="number">8&#x27;h06</span>;<span class="number">4&#x27;h2</span>: Q &lt;= <span class="number">8&#x27;h5B</span>;<span class="number">4&#x27;h3</span>: Q &lt;= <span class="number">8&#x27;h4F</span>;</span><br><span class="line">        <span class="number">4&#x27;h4</span>: Q &lt;= <span class="number">8&#x27;h66</span>;<span class="number">4&#x27;h5</span>: Q &lt;= <span class="number">8&#x27;h6D</span>;<span class="number">4&#x27;h6</span>: Q &lt;= <span class="number">8&#x27;h7D</span>;<span class="number">4&#x27;h7</span>: Q &lt;= <span class="number">8&#x27;h07</span>;</span><br><span class="line">        <span class="number">4&#x27;h8</span>: Q &lt;= <span class="number">8&#x27;h7F</span>;<span class="number">4&#x27;h9</span>: Q &lt;= <span class="number">8&#x27;h6F</span>;<span class="number">4&#x27;ha</span>: Q &lt;= <span class="number">8&#x27;h77</span>;<span class="number">4&#x27;hb</span>: Q &lt;= <span class="number">8&#x27;h7C</span>;</span><br><span class="line">        <span class="number">4&#x27;hc</span>: Q &lt;= <span class="number">8&#x27;h39</span>;<span class="number">4&#x27;hd</span>: Q &lt;= <span class="number">8&#x27;h5E</span>;<span class="number">4&#x27;he</span>: Q &lt;= <span class="number">8&#x27;h7B</span>;<span class="number">4&#x27;hf</span>: Q &lt;= <span class="number">8&#x27;h71</span>;</span><br><span class="line">		<span class="keyword">endcase</span></span><br><span class="line">	<span class="keyword">end</span></span><br><span class="line"><span class="keyword">endmodule</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="计数器"><a href="#计数器" class="headerlink" title="计数器"></a>计数器</h2><figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">module</span> cont6(clk,clr,en,set,q,co);</span><br><span class="line">	<span class="keyword">input</span> clk,clr,en;</span><br><span class="line">	<span class="keyword">input</span> set;</span><br><span class="line">	<span class="keyword">output</span> <span class="keyword">reg</span>[<span class="number">3</span>:<span class="number">0</span>] q;</span><br><span class="line">	<span class="keyword">output</span> <span class="keyword">reg</span> co;</span><br><span class="line">    <span class="keyword">always</span>@(<span class="keyword">posedge</span> en <span class="keyword">or</span> <span class="keyword">posedge</span> clk <span class="keyword">or</span> <span class="keyword">negedge</span> clr) <span class="keyword">begin</span></span><br><span class="line">        <span class="keyword">if</span>(en)<span class="keyword">begin</span></span><br><span class="line">            <span class="keyword">if</span>(clr == <span class="number">0</span>) <span class="keyword">begin</span></span><br><span class="line">				q &lt;= <span class="number">0</span>;</span><br><span class="line">				co &lt;= <span class="number">0</span>;</span><br><span class="line">			<span class="keyword">end</span> <span class="keyword">else</span> <span class="keyword">begin</span></span><br><span class="line">                <span class="keyword">if</span>(q &lt; <span class="number">9</span>) <span class="keyword">begin</span></span><br><span class="line">					q &lt;= q + <span class="number">1</span>;</span><br><span class="line">					co &lt;= <span class="number">0</span>;</span><br><span class="line">				<span class="keyword">end</span> <span class="keyword">else</span> <span class="keyword">begin</span></span><br><span class="line">					q &lt;= <span class="number">0</span>;</span><br><span class="line">					co &lt;= <span class="number">1</span>;</span><br><span class="line">				<span class="keyword">end</span></span><br><span class="line">			<span class="keyword">end</span></span><br><span class="line">        <span class="keyword">end</span></span><br><span class="line">	<span class="keyword">end</span></span><br><span class="line"><span class="keyword">endmodule</span> </span><br></pre></td></tr></table></figure>
+
+<h2 id="分频器"><a href="#分频器" class="headerlink" title="分频器"></a>分频器</h2><figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">module</span> div1hz(clk,q);</span><br><span class="line">	<span class="keyword">input</span> clk;</span><br><span class="line">	<span class="keyword">output</span> <span class="keyword">reg</span> q;</span><br><span class="line">	<span class="keyword">reg</span> [<span class="number">31</span>:<span class="number">0</span>]sys;</span><br><span class="line">    <span class="keyword">always</span>@(<span class="keyword">posedge</span> clk) <span class="keyword">begin</span></span><br><span class="line">		<span class="keyword">if</span>(sys &lt; <span class="number">10000</span>)</span><br><span class="line">			sys = sys + <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">begin</span></span><br><span class="line">			q = !q;</span><br><span class="line">			sys = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">end</span></span><br><span class="line">	<span class="keyword">end</span> </span><br><span class="line"><span class="keyword">endmodule</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="步进电机的控制"><a href="#步进电机的控制" class="headerlink" title="步进电机的控制"></a>步进电机的控制</h2><figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">module</span> ST(EN,DIR,CLK,MOD,IN,D);</span><br><span class="line">	<span class="keyword">input</span> CLK, EN, DIR, MOD;</span><br><span class="line">	<span class="keyword">input</span> [<span class="number">3</span>:<span class="number">0</span>]IN;</span><br><span class="line">	<span class="keyword">output</span> <span class="keyword">reg</span> [<span class="number">3</span>:<span class="number">0</span>]D;</span><br><span class="line">    <span class="keyword">reg</span>[<span class="number">2</span>:<span class="number">0</span>]CQ;</span><br><span class="line">    <span class="keyword">reg</span> ck;</span><br><span class="line">    <span class="keyword">reg</span>[<span class="number">31</span>:<span class="number">0</span>]sys;</span><br><span class="line">    <span class="keyword">always</span>@(<span class="keyword">negedge</span> ck)</span><br><span class="line">      <span class="keyword">begin</span></span><br><span class="line">        <span class="keyword">if</span>(EN) <span class="keyword">begin</span></span><br><span class="line">            <span class="keyword">if</span>(DIR)</span><br><span class="line">                CQ=CQ+<span class="number">1</span>;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                CQ=CQ-<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">end</span></span><br><span class="line">        <span class="keyword">if</span>(MOD)<span class="keyword">begin</span></span><br><span class="line">            <span class="keyword">case</span>(CQ[<span class="number">1</span>:<span class="number">0</span>])</span><br><span class="line">                <span class="number">0</span>: D&lt;=<span class="number">4&#x27;b1000</span>;</span><br><span class="line">                <span class="number">1</span>: D&lt;=<span class="number">4&#x27;b0100</span>;</span><br><span class="line">                <span class="number">2</span>: D&lt;=<span class="number">4&#x27;b0010</span>;</span><br><span class="line">                <span class="number">3</span>: D&lt;=<span class="number">4&#x27;b0001</span>;</span><br><span class="line">            <span class="keyword">endcase</span></span><br><span class="line">        <span class="keyword">end</span></span><br><span class="line">      <span class="keyword">else</span></span><br><span class="line">        <span class="keyword">case</span>(CQ)</span><br><span class="line">            <span class="number">0</span>:D&lt;=<span class="number">4&#x27;b1000</span>;</span><br><span class="line">            <span class="number">1</span>:D&lt;=<span class="number">4&#x27;b1100</span>;</span><br><span class="line">            <span class="number">2</span>:D&lt;=<span class="number">4&#x27;b0100</span>;</span><br><span class="line">            <span class="number">3</span>:D&lt;=<span class="number">4&#x27;b0110</span>;</span><br><span class="line">            <span class="number">4</span>:D&lt;=<span class="number">4&#x27;b0010</span>;</span><br><span class="line">            <span class="number">5</span>:D&lt;=<span class="number">4&#x27;b0011</span>;</span><br><span class="line">            <span class="number">6</span>:D&lt;=<span class="number">4&#x27;b0001</span>;</span><br><span class="line">            <span class="number">7</span>:D&lt;=<span class="number">4&#x27;b1001</span>;</span><br><span class="line">        <span class="keyword">endcase</span></span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line">    <span class="keyword">always</span>@(<span class="keyword">negedge</span> CLK)<span class="keyword">begin</span></span><br><span class="line">        <span class="keyword">if</span>(sys&lt;<span class="number">100</span>)</span><br><span class="line">            sys=sys+IN;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">begin</span></span><br><span class="line">            sys=<span class="number">0</span>;</span><br><span class="line">            ck=!ck;</span><br><span class="line">        <span class="keyword">end</span></span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line"><span class="keyword">endmodule</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="序列检测状态机"><a href="#序列检测状态机" class="headerlink" title="序列检测状态机"></a>序列检测状态机</h2><figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">module</span> SCHK(<span class="keyword">input</span> CLK, DIN ,RST,<span class="keyword">output</span> SOUT);</span><br><span class="line">    <span class="keyword">parameter</span> s0=<span class="number">41</span>, s1=<span class="number">41</span>, s2=<span class="number">42</span>, s3=<span class="number">43</span>, s4=<span class="number">44</span>,</span><br><span class="line">    			s5=<span class="number">45</span>, s6=<span class="number">46</span>, s7=<span class="number">47</span> ,s8=<span class="number">48</span>;</span><br><span class="line">    <span class="keyword">reg</span> [<span class="number">8</span>:<span class="number">0</span>] ST, NST;</span><br><span class="line">    <span class="keyword">always</span>@(<span class="keyword">posedge</span> CLK <span class="keyword">or</span> <span class="keyword">posedge</span> RST)</span><br><span class="line">        <span class="keyword">if</span>(RST)</span><br><span class="line">            ST &lt;= s0;</span><br><span class="line">    	<span class="keyword">else</span></span><br><span class="line">            ST &lt;= NST;</span><br><span class="line">    <span class="keyword">always</span>@(ST <span class="keyword">or</span> DIN) <span class="keyword">begin</span></span><br><span class="line">        <span class="keyword">case</span>(ST)</span><br><span class="line">            s0 : <span class="keyword">if</span>(DIN == <span class="number">1&#x27;b1</span>) NST &lt;= S1; <span class="keyword">else</span> NST &lt;= s0;</span><br><span class="line">            s1 : <span class="keyword">if</span>(DIN == <span class="number">1&#x27;b1</span>) NST &lt;= S2; <span class="keyword">else</span> NST &lt;= s0;</span><br><span class="line">            s2 : <span class="keyword">if</span>(DIN == <span class="number">1&#x27;b0</span>) NST &lt;= S3; <span class="keyword">else</span> NST &lt;= s2;</span><br><span class="line">            s3 : <span class="keyword">if</span>(DIN == <span class="number">1&#x27;b1</span>) NST &lt;= S4; <span class="keyword">else</span> NST &lt;= s0;</span><br><span class="line">            s4 : <span class="keyword">if</span>(DIN == <span class="number">1&#x27;b0</span>) NST &lt;= S5; <span class="keyword">else</span> NST &lt;= s2;</span><br><span class="line">            s5 : <span class="keyword">if</span>(DIN == <span class="number">1&#x27;b0</span>) NST &lt;= S6; <span class="keyword">else</span> NST &lt;= s1;</span><br><span class="line">            s6 : <span class="keyword">if</span>(DIN == <span class="number">1&#x27;b1</span>) NST &lt;= S7; <span class="keyword">else</span> NST &lt;= s0;</span><br><span class="line">            s7 : <span class="keyword">if</span>(DIN == <span class="number">1&#x27;b1</span>) NST &lt;= S8; <span class="keyword">else</span> NST &lt;= s0;</span><br><span class="line">            s8 : <span class="keyword">if</span>(DIN == <span class="number">1&#x27;b0</span>) NST &lt;= S3; <span class="keyword">else</span> NST &lt;= s2;</span><br><span class="line">            <span class="keyword">default</span> : NST &lt;= s0;</span><br><span class="line">        <span class="keyword">endcase</span></span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line">    <span class="keyword">assign</span> SOUT = (ST == s8);</span><br><span class="line"><span class="keyword">endmodule</span></span><br></pre></td></tr></table></figure>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p>老师上课的PPT和书本</p>
+
+        </div>
+
+        
+
+        
+            <div class="article-nav">
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2022/03/17/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">算法学习笔记</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+            <div class="comment-container">
+                <div class="comments-container">
+    <div id="comment-anchor"></div>
+    <div class="comment-area-title">
+        <i class="fas fa-comments">&nbsp;评论</i>
+    </div>
+    
+
+        
+            
+    <div class="valine-container">
+        <script data-pjax
+                src="//cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js"></script>
+        <div id="vcomments"></div>
+        <script data-pjax>
+            function loadValine() {
+                new Valine({
+                    el: '#vcomments',
+                    appId: 'hRIvFCp8qkVMLcqMdnAisc4U-gzGzoHsz',
+                    appKey: '3nh0gJDtBFR69iLVeaNnLdBh',
+                    meta: ['nick', 'mail', 'link'],
+                    avatar: 'wavatar',
+                    enableQQ: true,
+                    placeholder: '欢迎回复',
+                    lang: 'zh-CN'.toLowerCase()
+                });
+
+                function getAuthor(language) {
+                    switch (language) {
+                        case 'en':
+                            return 'Author';
+                        case 'zh-CN':
+                            return '博主';
+                        default:
+                            return 'Master';
+                    }
+                }
+
+                // Add "Author" identify
+                const getValineDomTimer = setInterval(() => {
+                    const vcards = document.querySelectorAll('#vcomments .vcards .vcard');
+                    if (vcards.length > 0) {
+                        let author = '曜';
+
+                        if (author) {
+                            for (let vcard of vcards) {
+                                const vnick_dom = vcard.querySelector('.vhead .vnick');
+                                const vnick = vnick_dom.innerHTML;
+                                if (vnick === author) {
+                                    vnick_dom.innerHTML = `${vnick} <span class="author">${getAuthor(KEEP.hexo_config.language)}</span>`
+                                }
+                            }
+                        }
+                        clearInterval(getValineDomTimer);
+                    } else {
+                        clearInterval(getValineDomTimer);
+                    }
+                }, 2000);
+            }
+
+            if ('true') {
+                const loadValineTimeout = setTimeout(() => {
+                    loadValine();
+                    clearTimeout(loadValineTimeout);
+                }, 1000);
+            } else {
+                window.addEventListener('DOMContentLoaded', loadValine);
+            }
+        </script>
+    </div>
+
+
+
+        
+    
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2020</span>&nbsp;-&nbsp;
+            
+            2022&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">曜</a>
+        </div>
+        
+            <script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    <span id="busuanzi_container_site_uv">
+                        访问人数&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv">
+                        总访问量&nbsp;<span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="theme-info info-item">
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.2</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+            <li class="go-comment">
+                <i class="fas fa-comment"></i>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#EDA%E6%8A%80%E6%9C%AF"><span class="nav-number">1.</span> <span class="nav-text">EDA技术</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#EDA%E6%8A%80%E6%9C%AF%E6%98%AF%E4%B8%80%E9%97%A8%E7%BB%BC%E5%90%88%E6%80%A7%E5%AD%A6%E7%A7%91%EF%BC%8C%E5%AE%83%E6%89%93%E7%A0%B4%E4%BA%86%E8%BD%AF%E4%BB%B6%E5%92%8C%E7%A1%AC%E4%BB%B6%E9%97%B4%E7%9A%84%E5%A3%81%E5%9E%92%EF%BC%8C%E4%BB%A3%E8%A1%A8%E4%BA%86%E7%94%B5%E5%AD%90%E8%AE%BE%E8%AE%A1%E6%8A%80%E6%9C%AF%E5%92%8C%E5%BA%94%E7%94%A8%E6%8A%80%E6%9C%AF%E7%9A%84%E5%8F%91%E5%B1%95%E6%96%B9%E5%90%91%E3%80%82"><span class="nav-number">1.1.</span> <span class="nav-text">EDA技术是一门综合性学科，它打破了软件和硬件间的壁垒，代表了电子设计技术和应用技术的发展方向。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BC%A9%E5%86%99"><span class="nav-number">1.2.</span> <span class="nav-text">缩写</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95"><span class="nav-number">2.</span> <span class="nav-text">基础语法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Verilog%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="nav-number">2.1.</span> <span class="nav-text">Verilog基本概念</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A8%A1%E5%9D%97%E8%AF%AD%E5%8F%A5%E5%8F%8A%E5%85%B6%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="nav-number">2.1.1.</span> <span class="nav-text">模块语句及其表达式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A8%A1%E5%9D%97%E5%90%8D%EF%BC%88%E6%A0%87%E8%AF%86%E7%AC%A6%EF%BC%89%E7%9A%84%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99%EF%BC%9A"><span class="nav-number">2.1.1.1.</span> <span class="nav-text">模块名（标识符）的命名规则：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A8%A1%E5%9D%97%E7%AB%AF%E5%8F%A3%E6%8F%8F%E8%BF%B0%E8%AF%AD%E5%8F%A5"><span class="nav-number">2.1.2.</span> <span class="nav-text">模块端口描述语句</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AB%AF%E5%8F%A3%E8%AF%AD%E5%8F%A5%E3%80%81%E7%AB%AF%E5%8F%A3%E4%BF%A1%E5%8F%B7%E5%90%8D%E3%80%81%E7%AB%AF%E5%8F%A3%E6%A8%A1%E5%BC%8F%EF%BC%9A"><span class="nav-number">2.1.2.1.</span> <span class="nav-text">端口语句、端口信号名、端口模式：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8F%8F%E8%BF%B0%E6%A8%A1%E5%9D%97%E7%9A%84%E9%80%BB%E8%BE%91%E5%8A%9F%E8%83%BD%E5%92%8C%E7%94%B5%E8%B7%AF%E7%BB%93%E6%9E%84"><span class="nav-number">2.1.3.</span> <span class="nav-text">描述模块的逻辑功能和电路结构</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%86%85%E9%83%A8%E4%BF%A1%E5%8F%B7%E8%AF%B4%E6%98%8E"><span class="nav-number">2.1.3.1.</span> <span class="nav-text">内部信号说明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#verilog%E6%95%B0%E6%8D%AE%E5%B8%B8%E9%87%8F%E5%AE%9A%E4%B9%89%EF%BC%9A"><span class="nav-number">2.1.3.2.</span> <span class="nav-text">verilog数据常量定义：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A1%B6%E5%B1%82%E7%A8%8B%E5%BA%8F%E8%B0%83%E7%94%A8%E5%BA%95%E5%B1%82module"><span class="nav-number">2.1.4.</span> <span class="nav-text">顶层程序调用底层module</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="nav-number">2.1.5.</span> <span class="nav-text">数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#reg"><span class="nav-number">2.1.5.1.</span> <span class="nav-text">reg</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#wire"><span class="nav-number">2.1.5.2.</span> <span class="nav-text">wire</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Verilog-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95"><span class="nav-number">2.2.</span> <span class="nav-text">Verilog 基本语法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%84%E7%A7%8D%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-number">2.2.1.</span> <span class="nav-text">各种运算符</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AE%97%E6%95%B0%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-number">2.2.1.1.</span> <span class="nav-text">算数运算符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%B3%E7%B3%BB%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-number">2.2.1.2.</span> <span class="nav-text">关系运算符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%B5%8B%E5%80%BC%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-number">2.2.1.3.</span> <span class="nav-text">赋值运算符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-number">2.2.1.4.</span> <span class="nav-text">逻辑运算符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9D%A1%E4%BB%B6%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-number">2.2.1.5.</span> <span class="nav-text">条件运算符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BD%8D%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-number">2.2.1.6.</span> <span class="nav-text">位运算符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%A7%BB%E4%BD%8D%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-number">2.2.1.7.</span> <span class="nav-text">移位运算符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8B%BC%E6%8E%A5%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-number">2.2.1.8.</span> <span class="nav-text">拼接运算符</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Verilog%E8%AF%AD%E5%8F%A5"><span class="nav-number">2.3.</span> <span class="nav-text">Verilog语句</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#assign%E8%AF%AD%E5%8F%A5"><span class="nav-number">2.3.0.1.</span> <span class="nav-text">assign语句</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#parameter%E8%AF%AD%E5%8F%A5"><span class="nav-number">2.3.0.2.</span> <span class="nav-text">parameter语句</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#begin-end%E8%AF%AD%E5%8F%A5"><span class="nav-number">2.3.0.3.</span> <span class="nav-text">begin-end语句</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#if%E8%AF%AD%E5%8F%A5"><span class="nav-number">2.3.0.4.</span> <span class="nav-text">if语句</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#case%E8%AF%AD%E5%8F%A5"><span class="nav-number">2.3.0.5.</span> <span class="nav-text">case语句</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#initial%E8%AF%AD%E5%8F%A5"><span class="nav-number">2.3.1.</span> <span class="nav-text">initial语句</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#always%E8%AF%AD%E5%8F%A5"><span class="nav-number">2.3.1.1.</span> <span class="nav-text">always语句</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5"><span class="nav-number">2.3.1.2.</span> <span class="nav-text">循环语句</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8A%B6%E6%80%81%E6%9C%BA"><span class="nav-number">2.4.</span> <span class="nav-text">状态机</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Moore-%E5%9E%8B%E7%8A%B6%E6%80%81%E6%9C%BA"><span class="nav-number">2.4.1.</span> <span class="nav-text">Moore 型状态机</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Mealy-%E5%9E%8B%E7%8A%B6%E6%80%81%E6%9C%BA"><span class="nav-number">2.4.2.</span> <span class="nav-text">Mealy 型状态机</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%8A%B6%E6%80%81%E6%9C%BA%E7%9A%84%E4%B8%80%E8%88%AC%E7%BB%93%E6%9E%84"><span class="nav-number">2.4.3.</span> <span class="nav-text">状态机的一般结构</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E8%AF%B4%E6%98%8E"><span class="nav-number">2.5.</span> <span class="nav-text">其他说明</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B3%A8%E9%87%8A"><span class="nav-number">2.5.1.</span> <span class="nav-text">注释</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%9B%E7%A7%8D%E9%80%BB%E8%BE%91%E7%8A%B6%E6%80%81"><span class="nav-number">2.5.2.</span> <span class="nav-text">四种逻辑状态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Verilog%E7%9A%84%E5%BB%B6%E8%BF%9F%EF%BC%9A"><span class="nav-number">2.5.3.</span> <span class="nav-text">Verilog的延迟：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A6%82%E5%BF%B5%E8%BE%A8%E6%9E%90"><span class="nav-number">3.</span> <span class="nav-text">概念辨析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E4%B8%8E%E6%97%B6%E5%BA%8F%E9%80%BB%E8%BE%91"><span class="nav-number">3.0.1.</span> <span class="nav-text">组合逻辑与时序逻辑</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%8C%E6%AD%A5%E3%80%81%E5%BC%82%E6%AD%A5"><span class="nav-number">3.0.2.</span> <span class="nav-text">同步、异步</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%98%BB%E5%A1%9E%E8%B5%8B%E5%80%BC%E4%B8%8E%E9%9D%9E%E9%98%BB%E5%A1%9E%E8%B5%8B%E5%80%BC"><span class="nav-number">3.0.3.</span> <span class="nav-text">阻塞赋值与非阻塞赋值</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%9E%E4%BE%8B"><span class="nav-number">4.</span> <span class="nav-text">实例</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%A0%E6%B3%95%E5%99%A8"><span class="nav-number">4.1.</span> <span class="nav-text">加法器</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8D%8A%E5%8A%A0%E5%99%A8"><span class="nav-number">4.1.0.1.</span> <span class="nav-text">半加器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%A8%E5%8A%A0%E5%99%A8"><span class="nav-number">4.1.0.2.</span> <span class="nav-text">全加器</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%91%E7%A0%81%E5%99%A8"><span class="nav-number">4.2.</span> <span class="nav-text">译码器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%A1%E6%95%B0%E5%99%A8"><span class="nav-number">4.3.</span> <span class="nav-text">计数器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%86%E9%A2%91%E5%99%A8"><span class="nav-number">4.4.</span> <span class="nav-text">分频器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AD%A5%E8%BF%9B%E7%94%B5%E6%9C%BA%E7%9A%84%E6%8E%A7%E5%88%B6"><span class="nav-number">4.5.</span> <span class="nav-text">步进电机的控制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BA%8F%E5%88%97%E6%A3%80%E6%B5%8B%E7%8A%B6%E6%80%81%E6%9C%BA"><span class="nav-number">4.6.</span> <span class="nav-text">序列检测状态机</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="nav-number">4.7.</span> <span class="nav-text">参考资料</span></a></li></ol></li></ol>
+    </div>
+</div>
+        </aside>
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/dark-light-toggle.js"></script>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/local-search.js"></script>
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/code-copy.js"></script>
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/lazyload.js"></script>
+
+
+<div class="post-scripts pjax">
+    
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/left-side-toggle.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/libs/anime.min.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/toc.js"></script>
+    
+</div>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/libs/pjax.min.js"></script>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        const pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+            // scrollTo: true,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            KEEP.utils.pjaxProgressBarStart();
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            KEEP.utils.pjaxProgressBarEnd();
+            pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+            KEEP.refresh();
+        });
+    });
+</script>
+
+
+
+</body>
+</html>

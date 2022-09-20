@@ -256,7 +256,7 @@
 <h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>注意：以下代码块中的命令均可以在命令提示符、 PowerShell 或者 Git 中运行。</p>
 <h4 id="安装-Node-js-和-Git"><a href="#安装-Node-js-和-Git" class="headerlink" title="安装 Node.js 和 Git"></a>安装 Node.js 和 Git</h4><p>Node.js 和 Git 程序的安装，没有什么可说的一路点 “下一步” 按默认配置就可以。</p>
 <h4 id="安装-Hexo"><a href="#安装-Hexo" class="headerlink" title="安装 Hexo"></a>安装 Hexo</h4><p>安装 hexo 也很简单，可以使用 npm 一键安装 Hexo 博客程序。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
 
 <h4 id="使用淘宝镜像"><a href="#使用淘宝镜像" class="headerlink" title="使用淘宝镜像"></a>使用淘宝镜像</h4><p><strong>临时</strong>使用淘宝镜像的命令：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm --registry https:&#x2F;&#x2F;registry.npm.taobao.org install express</span><br></pre></td></tr></table></figure>
@@ -327,8 +327,16 @@
 </li>
 </ul>
 <p>然后点击 Create repository 创建。</p>
-<h3 id="稳定访问GitHub"><a href="#稳定访问GitHub" class="headerlink" title="稳定访问GitHub"></a>稳定访问GitHub</h3><p>对 GitHub 说”爱”太难了：访问慢、图片加载不出来。一个项目解决<a class="link"   target="_blank" rel="noopener" href="https://github.com/521xueweihan/GitHub520" >Github520<i class="fas fa-external-link-alt"></i></a></p>
-<p>如果说，你完全无法访问。😂你可以试试gitee中的备份<a class="link"   target="_blank" rel="noopener" href="https://gitee.com/doshengl/GitHub520?_from=gitee_search" >Gitee <i class="fas fa-external-link-alt"></i></a> 不保证更新速度！</p>
+<h3 id="稳定访问GitHub"><a href="#稳定访问GitHub" class="headerlink" title="稳定访问GitHub"></a>稳定访问GitHub</h3><ul>
+<li><p>对 GitHub 说”爱”太难了：访问慢、图片加载不出来。一个项目解决<a class="link"   target="_blank" rel="noopener" href="https://github.com/521xueweihan/GitHub520" >Github520<i class="fas fa-external-link-alt"></i></a></p>
+</li>
+<li><p>使用Steam++也是一个不错的选择（虽然它好像已经改名为Watt Toolkit了）</p>
+<ul>
+<li>官网为：<a class="link"   target="_blank" rel="noopener" href="https://steampp.net/" >Watt Toolkit <i class="fas fa-external-link-alt"></i></a></li>
+<li>也可以选择再微软应用商店安装：<a class="link"   target="_blank" rel="noopener" href="https://apps.microsoft.com/store/detail/watt-toolkit/9MTCFHS560NG" >Watt Toolkit - Microsoft Store 应用程序<i class="fas fa-external-link-alt"></i></a></li>
+</ul>
+</li>
+</ul>
 <h2 id="第三步-搭建并简单配置博客"><a href="#第三步-搭建并简单配置博客" class="headerlink" title="第三步 搭建并简单配置博客"></a>第三步 搭建并简单配置博客</h2><h3 id="初始化Hexo"><a href="#初始化Hexo" class="headerlink" title="初始化Hexo"></a>初始化Hexo</h3><p>选择一个合适的文件位置，然后右键，选择 Git Bash Here。在 Git Bash 中分别执行以下代码。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo init &lt;folder&gt;  # 初始化&lt;folder&gt;是你保存博客的文件夹</span><br><span class="line">cd &lt;folder&gt;         # 进入你保存博客的文件夹</span><br><span class="line">npm install         # 安装对应组件</span><br></pre></td></tr></table></figure>
 
@@ -448,10 +456,11 @@
                 ></p>
 <p><strong>注意</strong>：存储空间名为之前申请的Bucket</p>
 <p><strong>注意</strong>：存储区域的代码，请查询阿里云的文档<a class="link"   target="_blank" rel="noopener" href="https://help.aliyun.com/document_detail/31837.html?spm=a2c4g.11186623.6.610.429b56d6ve33a7" >访问域名和数据中心 - 对象存储 OSS - 阿里云 (aliyun.com)<i class="fas fa-external-link-alt"></i></a>。</p>
-<h4 id="其他教程"><a href="#其他教程" class="headerlink" title="其他教程"></a>其他教程</h4><p>由于撰写这部分的时候还没有配置好图床，所以没有详细的图片教程，如果文字不能表现清楚，可以参考下面的文章。</p>
+<h4 id="其他教程"><a href="#其他教程" class="headerlink" title="其他教程"></a>其他教程</h4><p>由于撰写这部分的时候还没有配置好图床，所以没有详细的图片教程，如果文字不能表现清楚，可以参考下面的文章。（目前基本已经补充）</p>
 <p><a class="link"   target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/104152479" >阿里云OSS PicGo 配置图床教程 超详细 - 知乎 (zhihu.com)<i class="fas fa-external-link-alt"></i></a></p>
 <h3 id="备份md文件"><a href="#备份md文件" class="headerlink" title="备份md文件"></a>备份md文件</h3><p>推荐 <a class="link"   target="_blank" rel="noopener" href="https://www.jianguoyun.com/" >坚果云<i class="fas fa-external-link-alt"></i></a>，每月免费的流量一般就够用了。</p>
 <p>当然也可以选择使用github，但可能还是存在一定的上手难度。</p>
+<p>此文章经过反反复复多次修改，不免有些错漏，希望朋友们可以友好指出，留言或邮箱联系，很乐意成为你的朋友。[]<del>(￣▽￣)</del>*</p>
 <h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ol>
 <li><strong>MOxFIVE Blog</strong>: <a class="link"   target="_blank" rel="noopener" href="http://moxfive.xyz/ate" >http://moxfive.xyz/ate<i class="fas fa-external-link-alt"></i></a>  2020-04-18 16:35:03</li>
 <li><strong>Keep使用教程</strong>：<a class="link"   target="_blank" rel="noopener" href="https://keep-docs.xpoet.cn/" >https://keep-docs.xpoet.cn/<i class="fas fa-external-link-alt"></i></a>  2021-05-04 17:47:00</li>

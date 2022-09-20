@@ -9,7 +9,7 @@
     
     <title>
         
-            标签: github |
+            标签: Github |
         
         毕竟是只万年的喵了
     </title>
@@ -165,7 +165,7 @@
                 
                     <div class="fade-in-down-animation">
     <div class="tag-container">
-        <div class="tag-name"><i class="fas fa-tag"></i>&nbsp;github
+        <div class="tag-name"><i class="fas fa-tag"></i>&nbsp;Github
         </div>
         <div class="tag-post-list">
             
@@ -174,15 +174,29 @@
         <section class="archive-item">
             <div class="archive-item-header">
                 <span class="archive-year">2021</span>
-                <span class="archive-year-post-count">[1]</span>
+                <span class="archive-year-post-count">[3]</span>
             </div>
             <ul class="article-list">
                 
                     <li class="article-item">
                         <a class="article-title"
-                           href="/2021/05/18/VS-Code%E9%85%8D%E7%BD%AE/"
-                        >VS-Code配置指南</a>
-                        <span class="article-date">05-18</span>
+                           href="/2021/05/01/md%E6%96%87%E4%BB%B6%E7%9A%84%E6%A0%BC%E5%BC%8F%E6%80%BB%E7%BB%93/"
+                        >md文件的格式总结</a>
+                        <span class="article-date">05-01</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/2021/05/01/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E9%9D%99%E6%80%81%E7%9A%84%E4%B8%AA%E4%BA%BABLOG/"
+                        >如何搭建一个静态的个人BLOG</a>
+                        <span class="article-date">05-01</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/2021/05/01/gihub%E7%9A%84%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93/"
+                        >常用命令总结</a>
+                        <span class="article-date">05-01</span>
                     </li>
                 
             </ul>
@@ -354,39 +368,6 @@
     <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/libs/pjax.min.js"></script>
 <script>
     window.addEventListener('DOMContentLoaded', () => {
-        const pjax = new Pjax({
-            selectors: [
-                'head title',
-                '.page-container',
-                '.pjax'
-            ],
-            history: true,
-            debug: false,
-            cacheBust: false,
-            timeout: 0,
-            analytics: false,
-            currentUrlFullReload: false,
-            scrollRestoration: false,
-            // scrollTo: true,
-        });
-
-        document.addEventListener('pjax:send', () => {
-            KEEP.utils.pjaxProgressBarStart();
-        });
-
-        document.addEventListener('pjax:complete', () => {
-            KEEP.utils.pjaxProgressBarEnd();
-            pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
-            KEEP.refresh();
-        });
-    });
-</script>
-
-
-
-</body>
-</html>
-tLoaded', () => {
         const pjax = new Pjax({
             selectors: [
                 'head title',
