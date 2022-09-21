@@ -235,13 +235,13 @@
                      lazyload
                      src="/images/loading.svg"
                      data-src="https://live-production.wcms.abc-cdn.net.au/e645805cc9a70926608deb2262738fb4?src"
-                      alt="img"
+                      alt="75周年纪念币"
                 ></p>
 <p>声明：个人并没有真正破解出一下题目，所以题目思路均为网络收集。官方将在9月底公布答案，感兴趣的同学请自行关注。希望自己破解的同学可以可以看下面更清晰的背面图进行破解。<img  
                      lazyload
                      src="/images/loading.svg"
                      data-src="https://yao1208pic.oss-cn-beijing.aliyuncs.com/img/68e671fc990f65de7402188dcfa1cc08.png"
-                      alt="68e671fc990f65de7402188dcfa1cc08"
+                      alt="75周年纪念币背面"
                 ></p>
 <h2 id="第一关-盲文"><a href="#第一关-盲文" class="headerlink" title="第一关 盲文"></a>第一关 盲文</h2><p>首先，拿到一个复杂的题目，应该从最简单的地方开始看起。如果是一个平时善于观察的人，就可以很轻易的认出正面的凸起就是常常在电梯上见到的盲文。</p>
 <table>
@@ -303,7 +303,7 @@
 </tbody></table>
 <p>将盲文数字顺序重新排列上分的字母可得：ATBASH</p>
 <h2 id="第二关-Atbash加密"><a href="#第二关-Atbash加密" class="headerlink" title="第二关 Atbash加密"></a>第二关 Atbash加密</h2><p>通过第一关，我们得到了Atbash的提示，这是一种常见的加密方法。阿特巴希密码将字母表（希伯来语）整个扭转：第一个字母（aleph）与最后一个（taw）相替换，第二个（beth）与倒数第二个（shin）相替换，如此类推。映射到26个英文字母中，便可以得到上下对应的兑换表。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">前13個字母： A|B|C|D|E|F|G|H|I|J|K|L|M</span><br><span class="line">后13個字母： Z|Y|X|W|V|U|T|S|R|Q|P|O|N</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">前13个字母： A|B|C|D|E|F|G|H|I|J|K|L|M</span><br><span class="line">后13个字母： Z|Y|X|W|V|U|T|S|R|Q|P|O|N</span><br></pre></td></tr></table></figure>
 
 <p>目前还有内外两环的字母，以及看上去很像16进制一大串字母。</p>
 <p><strong>外环数据有两组：</strong></p>
@@ -338,7 +338,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">dvzivzfwzxrlfhrmxlmxvkgzmwnvgrxfolfhrmvcvxfgrlmurmwxozirgbrm7drwgsc5wvkgs</span><br><span class="line">.----&#x2F;----.&#x2F;....-&#x2F;--...&#x2F;-..&#x2F;...&#x2F;-...&#x2F;.-&#x2F;.-..&#x2F;-...&#x2F;.&#x2F;.-.&#x2F;-&#x2F;.--.&#x2F;.-&#x2F;.-.&#x2F;-.-</span><br></pre></td></tr></table></figure>
 
 <p>内环有两种状态猜测是二进制，猜测白色的是<code>0</code>，黑色的是1，可以解读为“**<code>ASDCbr2022</code>**”。具体思路比较特殊，一般人看到二进制可能不会将其七个为一个单位进行分割。一个比较合理的思路是，可以通过后面比较明显的相似性进行解读，推理出后面2022中的三个2后，再推出0，并想到把整个二进制切分为七个一组。再通过ASCII码解出整个密码。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">bgoamvo eiatsir lngttne ogrergx nteaifc ecaieoa lekfnr5 lwefchd eeaeee7 nmdrxx5</span><br><span class="line">1000001 1010011 1000100 1000011 1100010 1110010 0110010 0110000 0110010 0110010</span><br><span class="line">  A		   S	   D	   C	   b	   r	   2	   0	   2	   2</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">bgoamvo eiatsir lngttne ogrergx nteaifc ecaieoa lekfnr5 lwefchd eeaeee7 nmdrxx5</span><br><span class="line">1000001 1010011 1000100 1000011 1100010 1110010 0110010 0110000 0110010 0110010</span><br><span class="line">   A       S	   D	   C	   b	   r	   2	   0	   2	   2</span><br></pre></td></tr></table></figure>
 
 <p>据说，解出这个密码就可以去澳大利亚信号局工作了哦。</p>
 <h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ol>
